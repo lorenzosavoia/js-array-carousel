@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    width: 1000px;
+    height: 400px;
+}
+
+.main-img {
+    height: 100%;
+    width: 75%;
+    position: relative;
+}
+
+.slider-img {
+    height: 100%;
+    width: 25%;
+    position: relative;
+    background-color: gray;
+}
+
+div.miniatura {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.main-img .active {
+    display: block;
+}
+
+div.miniatura img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-img .description {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    color: white;
+    text-align: right;
+}
+
+.thumbnail {
+    height: 20%;
+    width: 100%;
+}
+
+.thumbnail img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.slider-img .thumbnail.activethumb img {
+    opacity: .2;
+}
+
+div[class^="arrow-"] {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+div[class^="arrow-"] i {
+    font-size: 1em;
+    cursor: pointer;
+    padding: .2em;
+}
+
+div[class^="arrow-"] i:hover {
+    color: black;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+div[class^="arrow-"] i:active {
+    background-color: gray;
+}
+
+.arrow-up {
+    top: 2%;
+}
+
+.arrow-down {
+    bottom: 2%;
+}
